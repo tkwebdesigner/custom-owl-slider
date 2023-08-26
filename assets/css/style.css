@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 400;
+    src: 
+        local('Poppins Regular'),
+        url(../fonts/poppins-regular-webfont.woff) format('woff2'), 
+        url(../fonts/poppins-regular-webfont.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 500;
+    src:
+        local('Poppins Medium'),
+        url(../fonts/poppins-medium-webfont.woff) format('woff2'), 
+        url(../fonts/poppins-medium-webfont.woff2) format('woff2');
+    font-display: swap;
+}
+:root{
+
+    /* ==================================
+        Font Family 
+    =====================================*/
+
+    --primary-font: 'Poppins', sans-serif;
+
+
+    /* ==================================
+        Color
+    =====================================*/
+    /* Backgrount Color */
+    --bg-white: #fff;
+    --bg-black: #000;
+    --bg-dark-gray: #888;
+    --bg-light-gray: #f7f7f7;
+
+    /* Text Colors */
+    --txt-white: #fff;
+    --txt-black: #000;
+    --txt-dark-gray: #888;
+    --txt-light-gray: #f7f7f7;
+
+    /* ==================================
+        Box Shadow
+    =====================================*/
+    --shadow-one: box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+
+    /* ==================================
+        Transitions
+    =====================================*/
+}
+*,
+*::after,
+*::before{
+    margin: 0; padding: 0; box-sizing: border-box; font-family: var(--primary-font);
+}
+
+body{
+    position: relative;
+    background-color: #151e28;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.cutom-slider-container{
+    padding: 15px 20px;
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: var(--shadow-one);
+}
+#tofique-slider{
+    position: relative;
+}
+#tofique-slider .item img{ 
+    border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; object-fit: cover;
+}
+#tofique-slider .owl-prev,#tofique-slider .owl-next{
+    position: absolute;
+    top: 50%;
+    color: var(--bg-white);
+    font-size: 36px;
+    background-color: transparent;
+    border: 1px solid var(--txt-white);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+#tofique-slider .owl-prev:hover,#tofique-slider .owl-next:hover{
+    background-color: var(--bg-black);
+    color: var(--bg-white);
+    border: 1px solid var(--bg-black);
+}
+#tofique-slider .owl-prev{
+    left: 0;
+}
+#tofique-slider .owl-next{
+    right: 0px;
+}
+#tofique-slider .owl-dots{
+    display: none;
+}
+#tofique-slider .img_box{
+    position: relative;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+#tofique-slider .img_box:hover .title{
+    font-size: 24px;
+    color: #f52;
+}
+#tofique-slider .img_box .title{
+    font-family: var(--primary-font);
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #f7f7f7;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
